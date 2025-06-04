@@ -115,8 +115,7 @@
             supportedFilesystems = ["btrfs"];
           };
 
-          networking.hostName = "amd-nixos";
-          time.timeZone = "Your/Timezone";
+          networking.hostName = "nixos";
 
           # ===== Swap & Memory =====
           swapDevices = [ {
@@ -157,7 +156,7 @@
           services.thermald.enable = true;
 
           # ===== User Config =====
-          users.users.youruser = {
+          users.users.ockojl = {
             isNormalUser = true;
             extraGroups = [ "wheel" "video" "networkmanager" "libvirtd" ];
             packages = with pkgs; [
